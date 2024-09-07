@@ -106,8 +106,51 @@
     ::-webkit-scrollbar-thumb:hover {
         background-color: hsla(0, 0%, 100%, .3)
     }
+
+    .nav-buttons {
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        transform: translateY(-50%);
+    }
+
+    .nav-buttons a {
+        display: block;
+        font-size: 1.8rem;
+        color: #fff;
+        margin-bottom: 15px;
+        position: relative;
+        text-decoration: none;
+        padding-bottom: 5px;
+        transition: color 0.3s ease, background-color 0.3s ease;
+    }
+
+    .nav-buttons a::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        background-color: #fff;
+        transition: width 0.3s ease;
+    }
+
+    .nav-buttons a:hover::after {
+        width: 100%;
+    }
+
+    .nav-buttons a:hover {
+        color: #fff;
+    }
 </style>
 <body>
+    <div class="nav-buttons">
+        <a href="/" class="btn">Home</a>
+        <a href="/about" class="btn">About Me</a>
+        <a href="/projects" class="btn">Projects</a>
+    </div>
+
     <div id="app">
         <div id="name">
             <h1>artur33</h1>
