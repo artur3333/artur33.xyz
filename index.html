@@ -3,41 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/resources/safari-pinned-tab.svg" color="#e072bc">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
-    <title>αɾƚυɾ33</title>
-    <meta property="og:locale" content="it_IT">
-    <meta property="og:title" content="artur33 - Home">
-    <meta property="og:description" content="⚡ Hello! I'm Artur, a person? It does not matter...">
+
+    <title>artur33</title>
     <meta name="description" content="⚡ Hello! I'm Artur, a person? It does not matter...">
-    <meta property="og:url" content="https://artur33.xyz/">
+
+    <meta property="og:locale" content="it_IT">
+    <meta property="og:title" content="Artur33 - Home">
+    <meta property="og:description" content="⚡ Hello! I'm Artur, a person? It does not matter...">
+    <meta property="og:url" content="https://artur33.xyz">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="artur33">
-    <meta property="og:image"
-          content="https://exelvi.xyz/og/Artur33.png?theme=dark&fontSize=210px&caption=Home&images=https://artur33.xyz/img/artur33.png&colors=2ec3ea&colors=628cda&colors=da4d81&colors=fa5726">
-    <meta name="twitter:image"
-          content="https://exelvi.xyz/og/Artur33.png?theme=dark&fontSize=210px&caption=Home&images=https://artur33.xyz/img/artur33.png&colors=2ec3ea&colors=628cda&colors=da4d81&colors=fa5726">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#2b5797">
-    <meta name="theme-color" content="#628cda">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Artur33 - Home">
-    <meta name="twitter:description" content="⚡ Hello! I'm Artur, a person? It does not matter...">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Artur33 - Home">
     <meta property="og:image:type" content="image/png">
     <meta property="og:title" content="Artur33 - Home">
+    <meta name="msapplication-TileColor" content="#e85193">
+    <meta name="theme-color" content="#ed95bb">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Artur33 - Home">
+    <meta name="twitter:description" content="⚡ Hello!">
+    <meta property="og:image"
+          content="https://exelvi.xyz/og/Artur33.png?theme=dark&fontSize=210px&caption=Home&images=https://artur33.xyz/resources/artur33.png&colors=2ec3ea&colors=628cda&colors=da4d81&colors=fa5726">
+    <meta name="twitter:image"
+          content="https://exelvi.xyz/og/Artur33.png?theme=dark&fontSize=210px&caption=Home&images=https://artur33.xyz/resources/artur33.png&colors=2ec3ea&colors=628cda&colors=da4d81&colors=fa5726">
 </head>
 <style>
     *::selection {
         background-color: transparent;
     }
+
     body, html, #app {
         margin: 0;
         width: 100%;
@@ -47,7 +53,7 @@
 
     @font-face {
         font-family: haus;
-        src: url('/haus.ttf');
+        src: url('/resources/haus.ttf');
     }
 
     #app {
@@ -65,8 +71,8 @@
     }
 
     #app h1 {
-        --fontSize: 90px;
-        --lineHeight: 40px;
+        --fontSize: 7.5vw;
+        --lineHeight: 4vw;
         width: auto;
         height: calc(2 * var(--lineHeight));
         line-height: var(--lineHeight);
@@ -87,12 +93,50 @@
         z-index: -1;
         top: 0;
     }
+
+    .nav-buttons {
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        transform: translateY(-50%);
+    }
+
+    .nav-buttons a {
+        display: block;
+        font-size: 2vw;
+        color: #fff;
+        margin-bottom: 15px;
+        position: relative;
+        text-decoration: none;
+        padding-bottom: 5px;
+        transition: color 0.3s ease, background-color 0.3s ease;
+    }
+
+    .nav-buttons a:hover {
+        color: #fff;
+    }
+
+    .nav-buttons a::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        background-color: #fff;
+        transition: width 0.3s ease;
+    }
+
+    .nav-buttons a:hover::after {
+        width: 100%;
+    }
+
     .social-buttons {
         margin-top: 30px;
     }
 
     .social-buttons a {
-        font-size: 2.5rem;
+        font-size: 3rem;
         margin: 0 15px;
         color: #fff;
         transition: transform 0.3s ease;
@@ -100,6 +144,132 @@
 
     .social-buttons a:hover {
         transform: scale(1.2);
+    }
+
+    #copyButton {
+        cursor: pointer;
+        user-select: auto;
+    }
+
+
+    .about-text {
+        font-family: Arial, sans-serif;
+        color: #fff;
+        text-shadow: 0 0 5px #ffffff, 0 0 20px #000, 0 0 30px #000;
+        margin: 60px auto;
+        padding: 30px;
+        width: 80%;
+        max-width: 700px;
+        text-align: center;
+        line-height: 1.6;
+        border-radius: 20px;
+        background-color: rgba(0, 0, 0, 0.5);
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Projects {
+        font-size: 64px;
+        color: #fff;
+        text-shadow: 0 0 5px #ffffff, 0 0 20px #000, 0 0 30px #000;
+        text-align: center;
+        align-items: center;
+    }
+
+    @media (max-width: 960px) {
+        #app h1 {
+            --fontSize: 15vw;
+            --lineHeight: 4vw;
+            width: auto;
+            height: calc(2 * var(--lineHeight));
+            line-height: var(--lineHeight);
+            font-size: var(--fontSize);
+            text-transform: uppercase;
+        }
+
+        .about-text {
+            margin-top: 100px;
+            padding: 20px;
+            width: 90%;
+            border-radius: 10px;
+        }
+
+        .nav-buttons {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            white-space: nowrap;
+        }
+
+        .nav-buttons a {
+            display: block;
+            font-size: 4vw;
+            padding: 5px 10px;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            color: #fff;
+            position: relative;
+            text-decoration: none;
+            transition: color 0.3s ease, background-color 0.3s ease;
+        }
+
+        .Projects {
+            font-size: 42px;
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .nav-buttons a {
+            font-size: 4vw;
+        }
+
+        .about-text {
+            margin-top: 60px;
+            padding: 10px;
+            width: 95%;
+            font-size: 4vw;
+            line-height: 1.4;
+        }
+    }
+
+    @media (min-width: 1366px) {
+        .about-text {
+            max-width: 1200px;
+            width: 70%;
+            padding: 40px;
+            font-size: 1.2vw;
+            line-height: 1.6;
+            margin: 50px auto;
+        }
+
+        .about-text p {
+            padding: 20px;
+        }
+    }
+
+    
+    .input-group-addon {
+        border: none;
+    }
+    
+    .name, .social-buttons, .about-text, .Projects {
+        opacity: 0;
+        transition: opacity 0.5s ease, visibility 0.5s ease;
+    }
+
+    .fade-in {
+        opacity: 1;
+        transition: opacity 0.5s ease-in-out;
     }
 
     ::-webkit-scrollbar {
@@ -128,72 +298,6 @@
         background-color: hsla(0, 0%, 100%, .3)
     }
 
-    .nav-buttons {
-        position: absolute;
-        top: 50%;
-        left: 20px;
-        transform: translateY(-50%);
-    }
-
-    .nav-buttons a {
-        display: block;
-        font-size: 1.8rem;
-        color: #fff;
-        margin-bottom: 15px;
-        position: relative;
-        text-decoration: none;
-        padding-bottom: 5px;
-        transition: color 0.3s ease, background-color 0.3s ease;
-    }
-
-    .nav-buttons a::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 0;
-        height: 2px;
-        background-color: #fff;
-        transition: width 0.3s ease;
-    }
-
-    .nav-buttons a:hover::after {
-        width: 100%;
-    }
-
-    .nav-buttons a:hover {
-        color: #fff;
-    }
-
-    #about-text {
-        font-size: 3.5rem;
-        font-family: Arial, sans-serif;
-        color: #fff;
-        text-shadow: 0 0 5px #ffffff, 0 0 20px #000, 0 0 30px #000;
-        position: relative;
-        margin-top: 20px;
-        width: 500px;
-        height: 500px;
-        border: 0 solid rgba(0, 0, 0, 0.5);
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    #about-text p {
-        padding: 100px;
-        text-align: center;
-        font-size: 1.5rem;
-    }
-    #Projects {
-        font-size: 64px;
-        color: #fff;
-        text-shadow: 0 0 5px #ffffff, 0 0 20px #000, 0 0 30px #000;
-        text-align: center;
-        align-items: center;
-    }
-
 </style>
 <body>
     <div class="nav-buttons">
@@ -204,8 +308,10 @@
 
     <div id="app">
         <!-- Name -->
-        <div id="name">
-            <h1>artur33</h1>
+        <div class="name">
+            <h1>
+                <a>artur33</a>
+            </h1>
         </div>
 
         <!-- Social Media -->
@@ -225,14 +331,17 @@
         </div>
 
         <!-- About -->
-        <div id="about-text">
-            <p>Ciao! Sono Artur, apassionato di informatica, il mio linguaggio main è Python, vivo in Italia e frequento un istituto tecnico con indirizzo informatica e telecomunicazioni.</p>
+        <div class="about-text">
+            <p>
+                Ciao! Sono Artur, apassionato di informatica, il mio linguaggio main è Python, vivo in Italia e frequento un istituto tecnico con indirizzo informatica e telecomunicazioni.
+            </p>
         </div>
 
         <!-- Projects -->
-        <div id="Projects">
+        <div class="Projects">
             <p>Coming Soon!</p>
         </div>
+
     </div>
 
     <script type="module">
@@ -250,31 +359,57 @@
         sleepTimeCoefX: 0.0025,
         sleepTimeCoefY: 0.0025
     });
+
     </script>
+
     <script>
         function showHome() {
-            document.getElementById('name').style.display = 'block';
+            document.querySelector('.name').style.display = 'flex';
             document.querySelector('.social-buttons').style.display = 'flex';
-            document.getElementById('about-text').style.display = 'none';
-            document.getElementById('Projects').style.display = 'none';
+            document.querySelector('.about-text').style.display = 'none';
+            document.querySelector('.Projects').style.display = 'none';
+            fadeOutAll();
+            setTimeout(function() {
+            document.querySelector('.name').classList.add('fade-in');
+            document.querySelector('.social-buttons').classList.add('fade-in');
+        }, 200);
         }
 
         function showAbout() {
-            document.getElementById('name').style.display = 'none';
+            document.querySelector('.name').style.display = 'none';
             document.querySelector('.social-buttons').style.display = 'none';
-            document.getElementById('about-text').style.display = 'block';
-            document.getElementById('Projects').style.display = 'none';
+            document.querySelector('.about-text').style.display = 'flex';
+            document.querySelector('.Projects').style.display = 'none';
+            fadeOutAll();
+            setTimeout(function() {
+            document.querySelector('.about-text').classList.add('fade-in');
+        }, 200);
         }
 
         function showProjects() {
-            document.getElementById('name').style.display = 'none';
+            document.querySelector('.name').style.display = 'none';
             document.querySelector('.social-buttons').style.display = 'none';
-            document.getElementById('about-text').style.display = 'none';
-            document.getElementById('Projects').style.display = 'block';
+            document.querySelector('.about-text').style.display = 'none';
+            document.querySelector('.Projects').style.display = 'flex';
+            fadeOutAll();
+            setTimeout(function() {
+            document.querySelector('.Projects').classList.add('fade-in');
+        }, 200);
+        }
+
+        function fadeOutAll() {
+            document.querySelector('.name').classList.remove('fade-in');
+            document.querySelector('.social-buttons').classList.remove('fade-in');
+            document.querySelector('.about-text').classList.remove('fade-in');
+            document.querySelector('.Projects').classList.remove('fade-in');
         }
 
         showHome();
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
 </body>
 </html>
